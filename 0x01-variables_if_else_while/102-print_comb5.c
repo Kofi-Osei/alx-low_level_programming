@@ -1,4 +1,4 @@
-#iinclude <stdio.h>
+#include <stdio.h>
 /**
  * main - prints possible combinations of 2 2-digit numbers
  * @i - first intializer
