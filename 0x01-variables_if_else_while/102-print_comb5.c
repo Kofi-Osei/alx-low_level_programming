@@ -1,4 +1,4 @@
-#include <stdio.h>
+#iinclude <stdio.h>
 /**
  * main - prints possible combinations of 2 2-digit numbers
  * @i - first intializer
@@ -10,26 +10,27 @@
 */
 int main(void)
 {
-	int i, j, k, l;
+	int i, j;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = i; j < 10; j++)
+		for (j = i; j < 100; j++)
 		{
-			for (k = 0; k < 10; k++)
+			if (i < j)
 			{
-				for (l = 1; l < 10; l++)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
 					putchar(',');
 					putchar(' ');
 				}
 			}
 		}
+
 	}
 	putchar('\n');
 	return (0);
